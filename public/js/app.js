@@ -1,13 +1,3 @@
-fetch("http://localhost:3000/weather?address=").then((response) => {
-    response.json().then((data) => {
-        if (data.error) {
-            console.log(data.error)
-        } else {
-            console.log(data)
-        }
-    })
-})
-
 const weatherForm = document.querySelector('form') //makes a connection to this attribute where the file is loaded
 const search = document.querySelector('input')
 
@@ -23,7 +13,7 @@ weatherForm.addEventListener('submit', (eventObject) => {
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
 
-    const url = "http://localhost:3000/weather?address=" + location
+    const url = "/weather?address=" + location
     fetch(url).then((response) => {
         response.json().then((data) => {
             if (data.error) {
