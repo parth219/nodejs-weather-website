@@ -25,8 +25,5 @@ weatherForm.addEventListener('submit', (eventObject) => {
             }
         })
     })
-
-
-
     console.log(location)
 })
